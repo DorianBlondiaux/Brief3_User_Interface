@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cv en ligne">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Blondiaux Dorian">
+  <title>Cv Dorian Blondiaux</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Schibsted Grotesk&display=swap' rel='stylesheet'> !-->
+</head>
+
+<body>
+    <div id="leftNavbar" class="sidebar">
+        <div class="navBarChoix">
+            <p class="toHover" id="userList" onclick="loadContent(this.id); if(!isPcSize){openCloseNav();}">Liste des utilisateurs</p>
+            <div class="navbar-list-divider"></div>
+            <p class="toHover" id="userCreate" onclick="loadContent(this.id); if(!isPcSize){openCloseNav();}">Créer utilisateur</p>
+            <div class="navbar-list-divider"></div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="topBar">
+            <div class="entete">
+                <span id="nom">UserTech Solutions</span>
+            </div>
+            <button class="openbtn" id="navBtn" onclick="openCloseNav()">☰</button>
+        </div>
+
+        <div id="content">
+        </div>
+
+        <footer>
+            <h5>Pages</h5>
+            <div>
+                <p class="toHover" id="userList2" onclick="loadContent(this.id)">Liste des utilisateurs</p>
+                <p class="toHover" id="userCreate2" onclick="loadContent(this.id)">Créer utilisateur</p>
+            </div>
+        </footer>
+    
+    </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
