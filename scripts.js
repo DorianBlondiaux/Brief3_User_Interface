@@ -97,7 +97,7 @@ function changeFontSize(element){
 }
 
 async function getUserListJson(){
-  const response = await fetch('https://reqres.in/api/users/');
+  const response = await fetch('https://reqres.in/api/users?per_page=12');
   const usersJson= await response.json();
 
   return usersJson;
@@ -113,7 +113,7 @@ function getUserListHtml(){
   promiseRes.then((result) =>
     result.data.map((user)=>
     document.getElementById("content").innerHTML += ` 
-                  <div class="card-body">
+                  <div class="card-body" onclick="openModal(${user.id})">
                     <img  src="${
                       user.avatar
                     }" class="img_item" alt="...">
@@ -121,9 +121,25 @@ function getUserListHtml(){
                         <div class="contenu_card">
                           <h5>${user.first_name}</h5>
                           <p class="descr_article">${user.last_name}</p>
-                          <button id="${user.id}" onclick="checkUser(this.id)" class="btn btn-primary">Ajouter</button>
                         </div>
                       </div>
+                      
+                      <div id="myModal${user.id}" class="modal">
+                        <div class="modal-content">
+                          <span class="close" onclick="closeModal(${user.id})">&times;</span>
+                          <img  src="${
+                            user.avatar
+                          }" class="img_item" alt="...">
+                            <div class="valise_contenu_card">
+                              <div class="contenu_card">
+                                <h5>${user.first_name}</h5>
+                                <p class="descr_article">${user.last_name}</p>
+                                <p class="descr_article">${user.email}</p>
+                                <button id="${user.id}" onclick="checkUser(this.id)" class="btn btn-primary">Ajouter</button>
+                              </div>
+                            </div>
+                        </div>
+                      </div>  
                   </div>`
   )
   );
@@ -132,4 +148,20 @@ function getUserListHtml(){
 
 function getUserCreate(){
 
+}
+
+function createHeaderFooter(){
+  
+}
+
+// When the user clicks on the button, open the modal
+function openModal(id) {
+  document.getElementById("myModal" + id).style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+function closeModal(id) {
+  console.log("myModal" + id);
+  console.log(document.getElementById("myModal" + id));
+  document.getElementById("myModal" + id).style.display = "none";
 }
