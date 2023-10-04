@@ -138,7 +138,7 @@ function getUserListHtml(){
                             <div class="valise_contenu_card">
                               <div class="contenu_card">
                                 <h6>${user.first_name} ${user.last_name}</h6>
-                                <p href="mailto:${user.email}" class="descr_article">Mail: ${user.email}</p>
+                                <a href="mailto:${user.email}" class="descr_article">Mail: ${user.email}</a>
                                 <p class="descr_article">${lorem}</p>
                               </div>
                             </div>

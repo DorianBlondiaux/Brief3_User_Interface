@@ -202,6 +202,9 @@
     font-size: 12px;
   }
 
+  a{
+    color: white;
+  }
 
   /* The Modal (background) */
 .modal {
