@@ -13,36 +13,7 @@
 </head>
 
 <body>
-    <div id="leftNavbar" class="sidebar">
-        <div class="navBarChoix">
-            <p class="toHover" id="userList" onclick="loadContent(this.id); if(!isPcSize){openCloseNav();}">Liste des utilisateurs</p>
-            <div class="navbar-list-divider"></div>
-            <p class="toHover" id="userCreate" onclick="loadContent(this.id); if(!isPcSize){openCloseNav();}">Créer utilisateur</p>
-            <div class="navbar-list-divider"></div>
-        </div>
-    </div>
-
-    <div id="main">
-        <div id="topBar">
-            <div class="entete">
-                <span id="nom">UserTech Solutions</span>
-            </div>
-            <button class="openbtn" id="navBtn" onclick="openCloseNav()">☰</button>
-        </div>
-
-        <div id="content">
-        </div>
-
-        <footer>
-            <h5>Pages</h5>
-            <div>
-                <p class="toHover" id="userList2" onclick="loadContent(this.id)">Liste des utilisateurs</p>
-                <p class="toHover" id="userCreate2" onclick="loadContent(this.id)">Créer utilisateur</p>
-            </div>
-        </footer>
-    
-    </div>
-
+    <div id="root"></div>
   <script src="scripts.js"></script>
 </body>
 
