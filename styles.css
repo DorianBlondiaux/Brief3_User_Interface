@@ -175,6 +175,10 @@
   margin-right: auto;
   }
 
+  .img_item:hover{
+    cursor: pointer;
+  }
+
   #content{
     overflow: hidden;
     display: inline-block;
