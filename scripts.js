@@ -34,6 +34,8 @@ loadContentCloseNav('userList');
 
   function loadContent(id) {
     var partToLoad ='';
+
+    document.getElementById("content").innerHTML = '';
     
     // Gestion du changement de couleur des éléments  de la sidebar quand séléctionnés
     sidebarSelection(id);
@@ -112,11 +114,7 @@ async function getUserListJson(){
 }
 
 function getUserListHtml(){
-  console.log('test');
   let promiseRes = getUserListJson();
-  console.log(promiseRes);
-
-  let htmlContent = "";
 
   promiseRes.then((result) =>
     result.data.map((user)=>
